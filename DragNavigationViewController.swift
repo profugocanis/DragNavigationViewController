@@ -4,8 +4,6 @@ import SwiftUIIntrospect
 // MARK: DragNavigationViewController
 open class DragNavigationViewController: UINavigationController {
     
-    let customNavigationTransactionHelper = CustomNavigationTransactionHelper()
-    
     var isEnabledPopGestureRecognizer: Bool = true {
         didSet {
             interactivePopGestureRecognizer?.isEnabled = isEnabledPopGestureRecognizer
@@ -18,6 +16,7 @@ open class DragNavigationViewController: UINavigationController {
     }
     
     fileprivate var statusBarStyle: UIStatusBarStyle = .darkContent
+    private let customNavigationTransactionHelper = CustomNavigationTransactionHelper()
     
     open override func viewDidLoad() {
         super.viewDidLoad()
