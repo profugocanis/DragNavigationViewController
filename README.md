@@ -9,14 +9,25 @@
 import UIKit
 
 class CustomNavigationController: DragNavigationViewController {
-...
+   ...
 }
 ```
 
 #### Use with SwiftUI.TabView
 ```Swift
-TabView(selection: $selectedIndex) {
 ...
+TabView(selection: $selectedIndex) {
+   ...
 }
 .setupWithNavigationGesture(position: selectedIndex)
+```
+
+#### Disable gesture
+```Swift
+dragNavigationViewController.isEnabledPopGestureRecognizer = false
+```
+
+#### Set StatusBarStyle
+```Swift
+dragNavigationViewController.setStatusBarStyle(.lightContent)
 ```
