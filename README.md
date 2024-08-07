@@ -9,15 +9,14 @@
 import UIKit
 
 class CustomNavigationController: DragNavigationViewController {
-    ...
+...
 }
 ```
 
 #### Use with SwiftUI.TabView
 ```Swift
-...
 TabView(selection: $selectedIndex) {
-	...
+...
 }
 .setupWithNavigationGesture(position: selectedIndex)
 ```
